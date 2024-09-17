@@ -1,2 +1,2 @@
-# deployment
-Deployment for page
+# Deployment
+Deployment for a webpage
