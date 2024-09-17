@@ -1,37 +1,66 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --text-color: #333;
+    --background-color: #ecf0f1;
+    --header-footer-bg: #34495e;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 header {
-    background-color: #333;
+    background-color: var(--header-footer-bg);
     color: #fff;
     padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 10px;
+    margin: 0 15px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
 }
 
 main {
+    max-width: 800px;
+    margin: 2rem auto;
     padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
 }
 
 footer {
-    background-color: #333;
+    background-color: var(--header-footer-bg);
     color: #fff;
     text-align: center;
     padding: 1rem;
@@ -43,17 +72,32 @@ footer {
 form {
     display: flex;
     flex-direction: column;
-    max-width: 300px;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
-label, input, textarea {
-    margin-bottom: 10px;
+label {
+    margin-bottom: 5px;
+    color: var(--secondary-color);
+}
+
+input, textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
 }
 
 button {
-    background-color: #333;
+    background-color: var(--primary-color);
     color: #fff;
     border: none;
-    padding: 10px;
+    padding: 12px;
     cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
 }
